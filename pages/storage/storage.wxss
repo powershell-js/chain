@@ -1,0 +1,11 @@
+/* pages/storage/storage.wxss */
+.a{
+  display: flex;
+  flex-direction: row;
+  font-size: 34rpx;
+  justify-content: space-between;
+}
+.picture>image{
+  width: 100rpx;
+  height: 100rpx;
+}

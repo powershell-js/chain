@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<view class="conter">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="../../image/logo.jpg" mode="cover"></image>
+      <!-- <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+    </block>
+    <view style='color:red;' class='login logins' bindtap='login' wx:if="{{login==''}}">登录</view>
+    <view class='login' bindtap='login' wx:if="{{login!=''}}">{{login}}</view>
+  </view>
+  <view class='list' bindtap='lease'>
+    <view>
+      <image class='list_img' src='../../image/lease.png'></image>
+    </view>
+    <view>冷库出租发布</view>
+  </view>
+  <view class='list' bindtap='renting'>
+    <view>
+      <image class='list_img' src='../../image/renting.png'></image>
+    </view>
+    <view>冷库求租发布</view>
+  </view>
+  <view class='list' bindtap='source'>
+    <view>
+      <image class='list_img' src='../../image/huowu.png'></image>
+    </view>
+    <view>货源发布</view>
+  </view>
+  <view class='list' bindtap='transport'>
+    <view>
+      <image class='list_img' src='../../image/car@3x.png'></image>
+    </view>
+    <view>运力发布</view>
+  </view>
+  <view class='list' bindtap='quit' wx:if="{{login!=''}}">
+    <view>
+      <image class='list_img' src='../../image/setting.png'></image>
+    </view>
+    <view class='red'>退出登录</view>
+  </view>
+</view>
+<view class='tost' wx:if="{{tost_hide}}">
+  <view class='tost_list'>{{tost}}</view>
+</view>
+<view class='animation'>
+  <image src='../../image/logo.jpg'></image>
+</view>
+<view class='animate'>123</view>

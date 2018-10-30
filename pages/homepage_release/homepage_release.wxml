@@ -1,0 +1,131 @@
+<view class='bottom'>
+  <view class='save' bindtap='save'>保存</view>
+</view>
+<view class='company'>
+  <view class='company_list'>
+    <view>
+      <image class='company_img' src='../../image/company@3x.png'></image>
+    </view>
+    <view>公司名称(可填个人)</view>
+    <text class='red'>*</text>
+  </view>
+  <view class='company_input'>
+    <input placeholder='请输入公司名称' bindinput='company' placeholder-style="color:#D5D5D5;" value='{{companyName}}' placeholder-class='holder'></input>
+    <view class='drop' wx-if="{{dropcheck}}">
+      <view wx:for="{{newcompanyName}}" data-company='{{item}}' bindtap='drop'>
+        <view class='drop_list'>{{item}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view>
+  <view wx:for="{{adds}}" bindtap='adds' data-index='{{index}}' class='conter'>
+    <view class='list'>
+      <view class='line'>
+        <view class='line_head'>
+          <view>
+            <view>
+              <image src='../../image/line.png' class='company_img'></image>
+            </view>
+            <view>运输线路
+              <text class='red'>*</text> </view>
+          </view>
+          <view>
+            <view catchtap='delet' data-index='{{index}}' class='red icon delet'>删除</view>
+            <view class='yello icon' catchtap='open' data-index='{{index}}' wx:if="{{!open[index]}}">展开</view>
+            <view class='yello icon' catchtap='open' data-index='{{index}}' wx:if="{{open[index]}}">收缩</view>
+            <view catchtap='add' class='icon'>
+              <image class='company_img' src='../../image/add.png'></image>
+            </view>
+          </view>
+        </view>
+        <view class='place'>
+          <view class='start'>
+            <view class="section__title">
+              <image class='picker1' src='../../image/down@3x.png'></image>
+            </view>
+            <view class="section">
+              <!-- <view class="section__title">省市区选择器</view> -->
+              <picker mode="region" catchchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" data-index='{{index}}'>
+                <view class="picker">
+                  <text wx:if="{{start[index]}}" style="color:#808080;">选择出发地</text>
+                  <text wx:if="{{!start[index]}}">{{item.place1[0]}},{{item.place1[1]}},{{item.place1[2]}}</text>
+                </view>
+              </picker>
+            </view>
+          </view>
+          <view>-</view>
+          <view class='end'>
+            <view class="section__title">
+              <image class='picker1' src='../../image/down@3x.png'></image>
+            </view>
+            <view class="section">
+              <!-- <view class="section__title">省市区选择器</view> -->
+              <picker mode="region" catchchange="bindRegionChanges" value="{{region}}" custom-item="{{customItem}}" data-index='{{index}}'>
+                <view class="picker">
+                  <text wx:if="{{starts[index]}}" style="color:#808080;">选择目的地</text>
+                  <text wx:if="{{!starts[index]}}">{{item.place2[0]}},{{item.place2[1]}},{{item.place2[2]}}</text>
+                </view>
+              </picker>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='dash'></view>
+      <view class='car' wx:if="{{open[index]}}">
+        <view class='line_head'>
+          <view>
+            <view>
+              <image src='../../image/car@3x.png' class='company_img'></image>
+            </view>
+            <view>车型选择(可多选)
+              <text class='red'>*</text> </view>
+          </view>
+          <!-- <view>
+            <view catchtap='delet' data-index='{{index}}' class='red icon'>删除</view>
+            <view class='yello icon' catchtap='open' wx:if="{{open}}">展开</view>
+            <view class='yello icon' catchtap='open' wx:if="{{!open}}">收缩</view>
+            <view catchtap='add' class='icon'>
+              <image class='company_img' src='../../image/add.png'></image>
+            </view>
+          </view> -->
+        </view>
+        <view class='place'>
+          <view class='car_length' catchtap='car_length' data-index='{{index}}'>
+            <!-- <input placeholder='选择车长' placeholder-class='holder'></input> -->
+            <view wx:if="{{item.car==''}}" style='color:#808080'>选择车长</view>
+            <view wx:if="{{item.car!=''}}">{{item.car}}</view>
+            <view>
+              <image class='picker1' src='../../image/down@3x.png'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- <input bindinput='input' value="{{item.name}}" placeholder-class='holder'></input>
+        <view catchtap='delet' data-index='{{index}}'>删除{{adds.length}}</view>
+        <view>展开</view>
+        <view catchtap='add'>添加</view> -->
+    </view>
+  </view>
+</view>
+<view class='contact'>
+  <view class='contact_list'>
+    <view class='telepho'>
+      <view>
+        <image class='company_img' src='../../image/telepho.png'></image>
+      </view>
+      <view>联系方式 <text class='red'>*</text> </view>
+    </view>
+    <view class='tele_input'>
+      <view>
+        <input placeholder='输入联系人' bindinput='contacts' placeholder-class='holder'></input>
+      </view>
+      <view>
+        <input placeholder='输入电话号码' bindinput='phone' placeholder-class='holder'></input>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='tost' wx:if="{{tost_hide}}">
+  <view class='tost_list'>{{tost}}</view>
+</view>

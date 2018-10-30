@@ -1,0 +1,33 @@
+
+<view wx:for="{{4}}" class='a'>
+  <view class="tui-picker-content">
+    <picker mode="multiSelector" value="{{satrtchoiceTime[index].dateTime}}" data-index='{{index}}' bindchange="changeTime" range="{{satrtchoiceTime[index].dateTimeArray}}">
+      <view class="tui-picker-detail" wx:if="{{satrtchoiceTimes[index]}}">
+        s:{{satrtchoiceTime[index].dateTimeArray[0][satrtchoiceTime[index].dateTime[0]]}}-{{satrtchoiceTime[index].dateTimeArray[1][satrtchoiceTime[index].dateTime[1]]}}-{{satrtchoiceTime[index].dateTimeArray[2][satrtchoiceTime[index].dateTime[2]]}} {{satrtchoiceTime[index].dateTimeArray[3][satrtchoiceTime[index].dateTime[3]]}}:{{satrtchoiceTime[index].dateTimeArray[4][satrtchoiceTime[index].dateTime[4]]}}:{{satrtchoiceTime[index].dateTimeArray[5][satrtchoiceTime[index].dateTime[5]]}}
+      </view>
+      <view class="tui-picker-detail" wx:if="{{!satrtchoiceTimes[index]}}">
+        请选择
+      </view>
+    </picker>
+  </view>
+  <view class="tui-picker-content">
+    <picker mode="multiSelector" value="{{endchoiceTime[index].dateTime}}" data-index='{{index}}' bindchange="changeTimes" range="{{endchoiceTime[index].dateTimeArray}}">
+      <view class="tui-picker-detail" wx:if="{{endchoiceTimes[index]}}">
+        s:{{endchoiceTime[index].dateTimeArray[0][endchoiceTime[index].dateTime[0]]}}-{{endchoiceTime[index].dateTimeArray[1][endchoiceTime[index].dateTime[1]]}}-{{endchoiceTime[index].dateTimeArray[2][endchoiceTime[index].dateTime[2]]}} {{endchoiceTime[index].dateTimeArray[3][endchoiceTime[index].dateTime[3]]}}:{{endchoiceTime[index].dateTimeArray[4][endchoiceTime[index].dateTime[4]]}}:{{endchoiceTime[index].dateTimeArray[5][endchoiceTime[index].dateTime[5]]}}
+      </view>
+      <view class="tui-picker-detail" wx:if="{{!endchoiceTimes[index]}}">
+        请选择
+      </view>
+    </picker>
+  </view>
+</view>
+<view class='picture'>
+  <image src='../../image/huowu.png'></image>
+</view>
+<!-- <button bindtap='saveImgToPhotosAlbumTap'>保存图片到手机相册</button> -->
+<view data-url="这是文档下载地址" data-type="excel" catchtap='downloadFile'>预览</view>
+<button 
+bindtouchstart="handleTouchStart" 
+bindtouchend="handleTouchEnd" 
+bindlongpress="handleLongPress" 
+bindtap="handleClick">按钮</button>

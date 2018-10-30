@@ -1,0 +1,24 @@
+<view class='conter'>
+  <view class='img'>
+    <view>
+      <image src='../../image/logo.jpg'></image>
+    </view>
+  </view>
+  <view class='user'>
+    <view>账号：</view>
+    <view class='user_1'>
+      <input placeholder='请输入账号' bindinput='user'></input>
+    </view>
+  </view>
+  <view class='password'>
+    <view>密码：</view>
+    <view class='password_1'>
+      <input placeholder='请输入密码' bindinput='password' type='password'></input>
+    </view>
+  </view>
+  <view class='login' bindtap='login'>登录</view>
+</view>
+<view class='tost' wx:if="{{tost_hide}}">
+  <view class='tost_list'>{{tost}}</view>
+</view>
+

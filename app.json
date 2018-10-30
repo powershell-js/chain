@@ -1,0 +1,67 @@
+{
+  "pages":["pages/personal/personal",
+    "pages/homepage/homepage",
+    
+    "pages/login/login",
+    "pages/source_release/source_release",
+    "pages/lease_release/lease_release",
+    "pages/lease/lease",
+    "pages/car/car",
+    "pages/homepage_release/homepage_release",
+    "pages/area/area",
+    "pages/company/company",
+    
+    "pages/region/region",
+    "pages/leaseRegion/leaseRegion",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/storage/storage",
+    "pages/transport/transport",
+    "pages/source/source",
+    
+    "pages/renting/renting",
+    "pages/renting_release/renting_release",
+    "pages/time/time"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#68A8FF",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/homepage/homepage",
+        "text": "搜运力",
+        "iconPath": "image/运力@3x.png",
+        "selectedIconPath": "image/yunli.png"
+      },
+      {
+        "pagePath": "pages/source/source",
+        "text": "找货源",
+        "iconPath": "image/货物@3x.png",
+        "selectedIconPath": "image/huowu.png"
+      },
+      {
+        "pagePath": "pages/lease/lease",
+        "text": "冷库出租",
+        "iconPath": "image/冷库@3x.png",
+        "selectedIconPath": "image/lengku.png"
+      },
+      {
+        "pagePath": "pages/renting/renting",
+        "text": "冷库求租",
+        "iconPath": "image/冷库@3x.png",
+        "selectedIconPath": "image/lengku.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "image/我的@3x.png",
+        "selectedIconPath": "image/wode.png"
+      }
+    ]
+  }
+}

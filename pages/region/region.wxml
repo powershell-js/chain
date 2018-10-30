@@ -1,0 +1,49 @@
+<view class="fixed">
+  <view class='head'>
+    <view class='search_img'>
+      <image src='../../image/search.png'></image>
+    </view>
+    <input placeholder='请输入城市' bindinput='input' value='{{search_value}}'></input>
+  </view>
+  <view class='search' wx:if="{{mark}}" bindtap='search'>搜索</view>
+  <view class='search' wx:if="{{!mark}}" bindtap='search'>取消</view>
+</view>
+<view class='conter'>
+  <view class='list' wx:if="{{history.length}}">
+    <view class='loops'>历史记录(可多选)</view>
+    <view class='loop'>
+      <view wx:for="{{history}}" class='back'>
+        <view bindtap='history' class="{{item.mark?'blue':''}}" data-info='{{index}}'>{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='list'>
+    <view class='loops'>热门城市(可多选)</view>
+    <view class='loop'>
+      <view wx:for="{{hot}}" class='back'>
+        <view bindtap='hot' class="{{item.mark?'blue':''}}" data-info='{{index}}'>{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:for="{{list}}" wx:for-item="cityItem" wx:key="{{index}}" class='checked list'>
+    <view>
+      <view wx:if="{{title}}">{{cityItem.key}}</view>
+      <view wx:for="{{cityItem.data}}" wx:for-item="city" wx:key="{{ind}}" class='city' bindtap='checked' data-infos='{{cityItem.num}}' data-index='{{city.index}}' wx:if="{{city.hide}}">
+        <view>
+          <checkbox checked="{{city.mark?true:false}}"></checkbox>
+        </view>
+        <view>{{city.name}}</view>
+      </view>
+    </view>
+    <!-- <view class='check' bindtap='checked' data-infos='{{index}}'>
+      <view>{{item.name}}</view>
+      <checkbox checked="{{item.checked?true:false}}"></checkbox>
+    </view> -->
+  </view>
+</view>
+<view class='bottom'>
+  <view class='save' bindtap='save'>确定</view>
+</view>
+<view class='tost' wx:if="{{tost_hide}}">
+  <view class='tost_list'>{{tost}}</view>
+</view>

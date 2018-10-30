@@ -1,0 +1,143 @@
+.tost{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tost_list{
+  width: 40%;
+  text-align: center;
+  height: 100rpx;
+  background: #fff;
+  line-height: 100rpx;
+  border-radius: 10rpx;
+}
+page{
+/* background: #EFEEF3; */
+  font-size:28rpx;
+}
+.fixed{
+  width: 100%;
+  height: 10vh;
+  box-sizing: border-box;
+  background:#6AA8FD; 
+  position: fixed;
+  top:0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;/*垂直居中*/
+  z-index: 999;
+}
+.head{
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  align-items:center;/*垂直居中*/
+  border-radius: 10rpx;
+  padding: 10rpx 0;
+  width: 78%;
+}
+.search{
+  color:#fff;
+  /* margin-left: 20rpx; */
+  box-sizing: border-box;
+  /* border:1rpx solid red; */
+  padding: 20rpx 30rpx;
+}
+.search_img{
+  display: flex;
+  flex-direction: row;
+  align-items:center;/*垂直居中*/
+  margin-left: 20rpx;
+}
+.search_img>image{
+  width: 42rpx;
+  height: 39rpx;
+}
+.conter{
+  width: 100%;
+  margin-top: 10vh;
+  padding-bottom: 140rpx;
+}
+.list{
+  width: 94%;
+  box-sizing: border-box;
+  /* border:1rpx solid red; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.blue{
+  background: #6AA8FD;
+  color:#fff;
+}
+.loop{
+  display: flex;
+  flex-wrap: wrap;
+  align-items:center;/*垂直居中*/
+  /*justify-content: center;水平居中*/
+}
+.loops{
+  margin-left: 20rpx;
+}
+.loop>view{
+  width: 29%;
+  margin: 2%;
+  box-sizing: border-box;
+  text-align: center;
+  background: #EEEFF3;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.check{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 94%;
+  box-sizing: border-box;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.checked{
+  padding: 0 20rpx;
+}
+.checked:nth-child(2n)>.check{
+  background: #ccc;
+}
+.city{
+  display: flex;
+  flex-direction: row;
+  align-items:center;/*垂直居中*/
+  height: 100rpx;
+}
+.bottom{
+  width: 100%;
+  height: 140rpx;
+  box-sizing: border-box;
+  /* border:1rpx solid red; */
+  background:#fff; 
+  position: fixed;
+  bottom:0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;/*垂直居中*/
+  z-index: 999;
+}
+.save{
+  width: 90%;
+  height: 100rpx;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  color:#fff;
+  background:#6AA8FD; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;/*垂直居中*/
+}

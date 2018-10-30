@@ -1,0 +1,72 @@
+<wxs module="timeData" src="../../filter/timeData.wxs"></wxs>
+<view>
+  <view class='heads'></view>
+  <view class='head'>
+    <view bindtap='choice' data-choice='1' class='head_img'>
+      <view>出发地</view>
+      <image wx:if="{{!choice1}}" src='../../image/down@3x.png'></image>
+      <image wx:if="{{choice1}}" src='../../image/down1@3x.png'></image>
+    </view>
+    <view bindtap='choice' data-choice='2' class='head_img'>
+      <view>目的地</view>
+      <image wx:if="{{!choice2}}" src='../../image/down@3x.png'></image>
+      <image wx:if="{{choice2}}" src='../../image/down1@3x.png'></image>
+    </view>
+    <view bindtap='choice' data-choice='3' class='head_img'>
+      <view>车型</view>
+      <image wx:if="{{!choice3}}" src='../../image/down@3x.png'></image>
+      <image wx:if="{{choice3}}" src='../../image/down1@3x.png'></image>
+    </view>
+    <view bindtap='choice' data-choice='4' class='head_img'>
+      <view>公司</view>
+      <image class='companys' wx:if="{{!choice4}}" src='../../image/down@3x.png'></image>
+      <image class='companys' wx:if="{{choice4}}" src='../../image/down1@3x.png'></image>
+    </view>
+  </view>
+  <view class='subject'>
+    <view class='conter'>
+      <view class='for' wx:for="{{message}}">
+        <view class='list'>
+          <view class='left_list'>
+            <image class='left_img' src='../../image/goods.png'></image>
+            <view>
+            <view>
+              <view class='city'>{{item.beginCity}} {{item.beginDistrict}} → {{item.endCity}} {{item.endDistrict}}</view>
+              <!-- <view class='city'>上海供应链集团有限公司</view> -->
+            </view>
+            <view class='car'>
+              <view>车型：</view>
+              <view class='car_1'>{{item.vehicleLen}}米</view>
+            </view>
+            <view class='pretend'>
+              <view>装车时间：{{timeData.getDate(item.truckLoadingTime,5,10)}}</view>
+              <view>到达时间：{{timeData.getDate(item.arrivalTime,5,10)}}</view>
+            </view>
+            
+            <view class='contacts' bindtap='telephone' data-info='{{item.phone}}'>{{item.contacts}}:{{item.phone}}</view>
+            <view class='adress'>
+              <view>
+                <image class='adress_img' src='../../image/company@3x.png'></image>
+              </view>
+              <view>{{item.companyName}}</view>
+            </view>
+          </view>
+          </view>
+          
+          <view class='time'>
+            <view>{{timeData.getDate(item.createTime,10,16)}}</view>
+            <view class='white'>1</view>
+            <view class='white'>1</view>
+            <view bindtap='telephone' data-info='{{item.phone}}'>
+              <image class='iphoto' src='../../image/telepho@3x.png'></image>
+            </view>
+            <view class='white'>1</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='tost' wx:if="{{tost_hide}}">
+  <view class='tost_list'>{{tost}}</view>
+</view>

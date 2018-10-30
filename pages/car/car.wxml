@@ -1,0 +1,30 @@
+<view class='conter'>
+  <view class='contont'>
+    <view>车型(可多选)</view>
+    <view class='list' bindtap='vehicle'>
+      <view bindtap='choice_0' data-choice='不限车长' class="{{choice_0==true?'blue':''}}">不限车长</view>
+      <view bindtap='choice_1' data-choice='4.2' class="{{choice_1==true?'blue':''}}">4.2米</view>
+      <view bindtap='choice_2' data-choice='5.6' class="{{choice_2==true?'blue':''}}">5.6米</view>
+      <view bindtap='choice_3' data-choice='7.6' class="{{choice_3==true?'blue':''}}">7.6米</view>
+      <view bindtap='choice_4' data-choice='9.6' class="{{choice_4==true?'blue':''}}">9.6米</view>
+      <view bindtap='choice_5' data-choice='15.5' class="{{choice_5==true?'blue':''}}">15米半挂</view>
+      <view bindtap='choice_6' data-choice='依维柯' class="{{choice_6==true?'blue':''}}">依维柯</view>
+      <view bindtap='choice_7' class="{{choice_7==true?'blue':''}}">{{inputinfoss}}</view>
+    </view>
+  </view>
+</view>
+<view class='fixed' wx:if="{{input}}">
+  <view class='input'>
+    <view class='input_1'>
+      <input type='digit' focus="true" bindinput='number'></input>
+      <text>米</text>
+    </view>
+    <view class='confirm'>
+      <view bindtap='cancel' class='cancel'>取消</view>
+      <view bindtap='confirm' class='cancel'>确定</view>
+    </view>
+  </view>
+</view>
+<view class='sure' bindtap='sure'>
+  <view class='sures'>确定</view>
+</view>

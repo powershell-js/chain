@@ -1,0 +1,106 @@
+<view class='bottom'>
+  <view class='save' bindtap='save'>保存</view>
+</view>
+<view class='company'>
+  <view class='company_list'>
+    <view>
+      <image class='company_img' src='../../image/company@3x.png'></image>
+    </view>
+    <view>公司名称(可填个人)</view>
+    <text class='red'>*</text>
+  </view>
+  <view class='company_input'>
+    <input placeholder='请输入公司名称' bindinput='company' placeholder-style="color:#D5D5D5;" value='{{companyName}}' placeholder-class='holder'></input>
+    <view class='drop' wx-if="{{dropcheck}}">
+      <view wx:for="{{newcompanyName}}" data-company='{{item}}' bindtap='drop'>
+        <view class='drop_list'>{{item}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='position'>
+  <view class='company_list'>
+    <view>
+      <image class='company_img' src='../../image/position.png'></image>
+    </view>
+    <view>位置</view>
+    <text class='red'>*</text>
+  </view>
+  <view class='position_input'>
+    <view class="section position_input_1 position_input_2 position_input_3">
+      <!-- <view class="section__title">省市区选择器</view> -->
+      <picker mode="region" class='picker_1' catchchange="bindRegionChanges" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          <text wx:if="{{!start}}" style="color:#808080;">所在地区</text>
+          <text wx:if="{{start}}">{{place[0]}},{{place[1]}},{{place[2]}}</text>
+          <view class='picker_2'>
+            <view>请选择</view>
+            <view>
+              <image src='../../image/jump@3x.png'></image>
+            </view>
+          </view>
+        </view>
+        
+      </picker>
+      
+    </view>
+    <!-- <view class='position_input_1 position_input_2 position_input_3'> -->
+    <!-- <input placeholder='所在地区'
+    placeholder-class='holder'></input> -->
+    <!-- <view>请选择</view> -->
+    <!-- </view> -->
+    <view class='position_input_1 position_input_2'>
+      <input placeholder='详细地址' bindinput='address'
+      placeholder-class='holder'></input>
+    </view>
+  </view>
+  <view class='dash'></view>
+  <view class='company_list'>
+    <view>
+      <image class='company_img' src='../../image/option.png'></image>
+    </view>
+    <view>选项</view>
+    <text class='red'>*</text>
+  </view>
+  <view class='option'>
+    <view class='area1'>
+      <view class='area11'>
+        <input placeholder='输入面积' type='digit' bindinput='areas'
+        placeholder-class='holder'></input>
+      </view>
+      <view>平方米</view>
+    </view>
+    <view class='rent'>
+      <view>元</view>
+      <view class='rent1'>
+        <input placeholder='输入租金' type='digit' bindinput='rent'
+        placeholder-class='holder'></input>
+      </view>
+
+    </view>
+  </view>
+</view>
+<view class='contact'>
+  <view class='contact_list'>
+    <view class='telepho'>
+      <view>
+        <image class='company_img' src='../../image/telepho.png'></image>
+      </view>
+      <view>联系方式
+        <text class='red'>*</text> </view>
+    </view>
+    <view class='tele_input'>
+      <view>
+        <input placeholder='输入联系人' bindinput='contacts'
+        placeholder-class='holder'></input>
+      </view>
+      <view class='phones'>
+        <input placeholder='输入电话号码' bindinput='phone'
+        placeholder-class='holder'></input>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='tost' wx:if="{{tost_hide}}">
+  <view class='tost_list'>{{tost}}</view>
+</view>

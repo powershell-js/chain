@@ -1,0 +1,72 @@
+<wxs module="timeData" src="../../filter/timeData.wxs"></wxs>
+<view>
+  <view class='heads'></view>
+  <view class='head'>
+    <view bindtap='choice' data-choice='1' class='head_img'>
+      <view>地区</view>
+      <image wx:if="{{!choice1}}" src='../../image/down@3x.png'></image>
+      <image wx:if="{{choice1}}" src='../../image/down1@3x.png'></image>
+    </view>
+    <!-- <view bindtap='choice' data-choice='2' class='head_img'>
+      <view>目的地</view>
+      <image wx:if="{{!choice2}}" src='../../image/down@3x.png'></image>
+      <image wx:if="{{choice2}}" src='../../image/down1@3x.png'></image>
+    </view> -->
+    <view bindtap='choice' data-choice='3' class='head_img'>
+      <view>面积</view>
+      <image wx:if="{{!choice3}}" src='../../image/down@3x.png'></image>
+      <image wx:if="{{choice3}}" src='../../image/down1@3x.png'></image>
+    </view>
+    <view bindtap='choice' data-choice='4' class='head_img'>
+      <view>公司</view>
+      <image class='companys' wx:if="{{!choice4}}" src='../../image/down@3x.png'></image>
+      <image class='companys' wx:if="{{choice4}}" src='../../image/down1@3x.png'></image>
+    </view>
+  </view>
+  <view class='subject'>
+    <view class='conter'>
+      <view class='for' wx:for="{{message}}">
+        <view class='list'>
+          <view class='left_list'>
+            <image class='left_img' src='../../image/renting.png'></image>
+            <view>
+            <view>
+              <!-- <view class='city'>北京 西城 → 深圳 南山</view> -->
+              <view class='city'>{{item.companyName}}</view>
+            </view>
+            <view class='pretend'>
+              <view>要求：<text class='contacts'>{{item.coldArea}}平方</text> <text class='contacts'>{{item.charterMoney}}元/月</text></view>
+              <view class='contacts'>{{item.contacts}}：{{item.phone}}</view>
+            </view>
+            <!-- <view class='car'>
+              <view>车型：</view>
+              <view class='car_1'>9.6米/7.6米88888888</view>
+            </view>
+            <view class='contacts' bindtap='telephone' data-info='{{13025326541}}'>张女士：13025326541</view> -->
+            <view class='adress'>
+              <!-- <view>
+                <image class='adress_img' src='../../image/company@3x.png'></image>
+              </view> -->
+              <view>位置：{{item.detailedAddress}}</view>
+            </view>
+          </view>
+          </view>
+          
+          <view class='time'>
+            <view>{{timeData.getDate(item.createTime,10,16)}}</view>
+            <view class='white'>1</view>
+            <!-- <view class='white'>1</view> -->
+            <!-- <view class='white'>1</view> -->
+            <view bindtap='telephone' data-info='{{item.phone}}'>
+              <image class='iphoto' src='../../image/telepho@3x.png'></image>
+            </view>
+            
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='tost' wx:if="{{tost_hide}}">
+  <view class='tost_list'>{{tost}}</view>
+</view>

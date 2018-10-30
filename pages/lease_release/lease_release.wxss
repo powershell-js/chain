@@ -1,0 +1,340 @@
+page{
+  background: rgb(241,240,245);
+  font-size:28rpx;
+  width: 100%;
+  overflow: hidden;
+  
+}
+.holder{
+  color:#808080!important;
+}
+.fixed{
+  position: fixed;
+  bottom:0;
+  width: 100%;
+  height: 100rpx;
+  background: rgb(254,242,245);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  z-index: 99;
+}
+.fixed>view{
+  width: 90%;
+  height: 100rpx;
+  background: rgb(106,168,254);
+  color:#fff;
+  display: flexl;
+  text-align: center;
+  line-height: 100rpx;
+  border-radius: 10rpx;
+}
+.red{
+  color:#F13A3A;
+}
+.company{
+  width: 100%;
+  background: #fff;
+  padding: 20rpx 0;
+}
+.position{
+  z-index: 9;
+  width: 100%;
+  background: #fff;
+  padding: 20rpx 0;
+  /* margin: 20rpx 0; */
+  overflow: hidden;
+}
+.company_list{
+  display: flex;
+  flex-direction: row;
+  align-items:center;/*垂直居中*/
+  width: 90%;
+  margin: 0 auto;
+}
+.position_input{
+  position: relative;
+  border: 1rpx solid #D5D5D5;
+  /* color:#D5D5D5; */
+  width: 90%;
+  height: 160rpx;
+  display: flex;
+  flex-direction: column;
+  align-items:center;/*垂直居中*/
+  padding: 0 20rpx;
+  border-radius: 10rpx;
+  margin: 0 auto;
+}
+.position_input_1{
+  /* border:1rpx solid red; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items:center;/*垂直居中*/
+  justify-content: space-between;
+}
+.company_input{
+  position: relative;
+  border: 1rpx solid #D5D5D5;
+  /* color:#D5D5D5; */
+  width: 90%;
+  height: 80rpx;
+  display: flex;
+  /* flex-direction: row; */
+  align-items:center;/*垂直居中*/
+  padding: 0 20rpx;
+  border-radius: 10rpx;
+  margin: 0 auto;
+}
+.position_input_1 input{
+  width: 80%;
+}
+.position_input_2{
+  height: 80rpx;
+}
+.position_input_3{
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #D5D5D5;
+}
+.drop{
+  z-index: 9999;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+  width: 100%;
+  left: 0;
+  max-height: 400rpx;
+  overflow-y: scroll;
+  position: absolute;
+  /* border:1rpx solid red; */
+  top: 90rpx;
+  background: #fff;
+  -webkit-box-shadow: rgb(214, 218, 228) 0px 0px 10px;
+   -moz-box-shadow: rgb(214, 218, 228) 0px 0px 10px;
+   box-shadow: rgb(214, 218, 228) 0px 0px 10px;
+}
+.drop_list{
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.option{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.area1{
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  align-items:center;/*垂直居中*/
+}
+.area11{
+  border:1rpx solid #D5D5D5;
+  width: 65%;
+  height: 80rpx;
+  margin-right: 10rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-items:center;/*垂直居中*/
+  padding-left: 10rpx;
+}
+.rent{
+  display: flex;
+  flex-direction: row-reverse;
+  width: 50%;
+  align-items:center;/*垂直居中*/
+  margin-right: 40rpx;
+}
+.phones{
+  margin-right: 40rpx;
+
+}
+.rent1{
+  border:1rpx solid #D5D5D5;
+  width: 65%;
+  height: 80rpx;
+  margin-right: 10rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-items:center;/*垂直居中*/
+  padding-left: 10rpx;
+}
+.picker_1{
+  /* border:1rpx solid red; */
+  width: 100%;
+  height: 80rpx;
+  position: relative;
+  line-height: 80rpx;
+}
+.picker_2{
+  position: absolute;
+  right: -26rpx;
+  top:0;
+  display: flex;
+  flex-direction: row;
+}
+.picker_2 image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.conter{
+  width: 100%;
+  background: #fff;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}
+.list{
+  
+  box-sizing: border-box;
+  /* border:1rpx solid red; */
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 20rpx auto;
+  padding: 20rpx 0;
+}
+.company_img{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+.line{
+  box-sizing: border-box;
+  /* border:1rpx solid red; */
+}
+.line_head{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  /* border:1rpx solid red; */
+}
+.line_head>view{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.icon{
+  margin: 10rpx;
+}
+.place{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.start{
+  box-sizing: border-box;
+  border:1rpx solid rgb(204, 204, 204);
+  width: 46%;
+  overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
+padding: 20rpx;
+border-radius: 10rpx;
+}
+.end{
+  padding: 20rpx;
+border-radius: 10rpx;
+  box-sizing: border-box;
+  border:1rpx solid rgb(204, 204, 204);
+  width: 46%;
+  overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
+}
+.dash{
+  width: 94%;
+  margin: 20rpx auto;
+  border-top:1rpx dashed rgb(204, 204, 204);
+}
+.contact{
+  width: 100%;
+  background: #fff;
+  margin-bottom: 120rpx;
+}
+.contact_list{
+  width: 94%;
+  margin: 0 auto;
+  /* padding: 20rpx; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* padding: 0 20rpx; */
+}
+.telepho{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.tele_input{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.tele_input>view{
+  margin: 10rpx auto;
+  width: 100%;
+  box-sizing: border-box;
+  border:1rpx solid rgb(204, 204, 204);
+  padding: 10rpx;
+  border-radius: 10rpx;
+  margin-right: 6%;
+}
+.car_length{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border:1rpx solid rgb(204, 204, 204);
+  padding: 10rpx;
+  border-radius: 10rpx;
+}
+.bottom{
+  width: 100%;
+  height: 140rpx;
+  box-sizing: border-box;
+  /* border:1rpx solid red; */
+  background:#fff; 
+  position: fixed;
+  bottom:0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;/*垂直居中*/
+  z-index: 999;
+}
+.save{
+  width: 90%;
+  height: 100rpx;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  color:#fff;
+  background:#6AA8FD; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;/*垂直居中*/
+}
+.tost{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tost_list{
+  width: 40%;
+  text-align: center;
+  height: 100rpx;
+  background: #fff;
+  line-height: 100rpx;
+  border-radius: 10rpx;
+}

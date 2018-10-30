@@ -1,0 +1,36 @@
+<view class='conter'>
+  <view class='contont'>
+    <view>地区</view>
+    <view class='list' bindtap='vehicle'>
+      <view bindtap='choice_0' data-choice='不限' class="{{choice_0==true?'blue':''}}">不限</view>
+      <view bindtap='choice_1' data-choice='100' class="{{choice_1==true?'blue':''}}">100㎡以下</view>
+      <view bindtap='choice_2' data-choice='100,200' class="{{choice_2==true?'blue':''}}">100-200㎡</view>
+      <view bindtap='choice_3' data-choice='200,300' class="{{choice_3==true?'blue':''}}">200-300㎡</view>
+      <view bindtap='choice_4' data-choice='300,400' class="{{choice_4==true?'blue':''}}">300-400㎡</view>
+      <view bindtap='choice_5' data-choice='400米以上' class="{{choice_5==true?'blue':''}}">400㎡以上</view>
+      <view bindtap='choice_6' class="{{choice_6==true?'blue':''}} areas">
+        <input bindinput='areas1' value='{{areas1}}'></input>
+      </view>
+      <text>-</text>
+      <view bindtap='choice_7' class="{{choice_7==true?'blue':''}} areas">
+        <input bindinput='areas2' value='{{areas2}}'></input>
+      </view>
+      <text>㎡</text>
+    </view>
+  </view>
+</view>
+<!-- <view class='fixed' wx:if="{{input}}">
+  <view class='input'>
+    <view class='input_1'>
+      <input type='digit' focus="true" bindinput='number'></input>
+      <text>米</text>
+    </view>
+    <view class='confirm'>
+      <view bindtap='cancel' class='cancel'>取消</view>
+      <view bindtap='confirm' class='cancel'>确定</view>
+    </view>
+  </view>
+</view> -->
+<view class='sure' bindtap='sure'>
+  <view class='sures'>确定</view>
+</view>
